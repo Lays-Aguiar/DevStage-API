@@ -56,22 +56,16 @@ O **DevStage** é uma plataforma de inscrição em eventos que permite aos usuá
    ```bash
    npm run dev
    ```
-   A aplicação estará disponível em `http://localhost:3000`.
+   A aplicação estará disponível em `http://localhost:3333`.
 
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
-
-## 📜 Licença
-
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais informações.
 
 ## 🎓 Certificado
 
 Este projeto foi desenvolvido por **Lays Vidal de Aguiar** durante o **NLW Connect** da Rocketseat.
 
-<img height="120em" src="./assets/certificado.png" />
+<h1 align="center">
+  <img src=./assets/certificado.png>
+</h1>
 
 - 📜 Certificado: [Visualizar Certificado](https://app.rocketseat.com.br/certificates/f76f15f2-6142-4c4b-985a-da6442e202c7)
 - 🔑 Código de validação: `f76f15f2-6142-4c4b-985a-da6442e202c7`
