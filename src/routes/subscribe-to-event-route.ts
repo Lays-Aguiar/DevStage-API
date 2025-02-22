@@ -21,6 +21,7 @@ export const subscribeToEventRoute: FastifyPluginAsyncZod = async (app) => {
         }
     }, async (request, replay) => {
         const { name, email } = request.body
+        const teste = 1
         return replay.status(201).send({ name, email })
     })
 
