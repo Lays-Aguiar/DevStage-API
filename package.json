@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch --env-file=.env src/server.ts",
+    "build": "tsup-node ",	
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,6 +21,7 @@
     "fastify-type-provider-zod": "^4.0.2",
     "ioredis": "^5.5.0",
     "postgres": "^3.4.5",
+    "tsup": "^8.3.6",
     "zod": "^3.24.2"
   },
   "devDependencies": {
