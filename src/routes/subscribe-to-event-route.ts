@@ -1,6 +1,6 @@
-import { FastifyPluginAsyncZod } from "fastify-type-provider-zod"
-import z from "zod"
-import { subscribeToEvent } from "../functions/subscribe-to-event"
+import { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
+import z from "zod";
+import { listSubscriptions, subscribeToEvent } from "../functions/subscribe-to-event";
 
 export const subscribeToEventRoute: FastifyPluginAsyncZod = async (app) => {
 
@@ -8,7 +8,6 @@ export const subscribeToEventRoute: FastifyPluginAsyncZod = async (app) => {
 
         schema: {
             summary: 'subscribe someone to the event',
-
             body: z.object({
                 name: z.string().min(3).max(255),
                 email: z.string().email(),
@@ -28,8 +27,24 @@ export const subscribeToEventRoute: FastifyPluginAsyncZod = async (app) => {
         return replay.status(201).send({ subscriberId })
     })
 
-    app.get('/subscriptions', () => {
-        return 'hello word'
+    app.get('/subscriptions', {
+
+        schema: {
+            summary: 'List all Subscriptions',
+            response: {
+
+                200: z.array(z.object({
+                    id: z.string(),
+                    name: z.string(),
+                    email: z.string(),
+                }))
+            }
+
+        }
+    }, async (request, replay) => {
+        const result = await listSubscriptions()
+        return replay.status(200).send(result)
+
     })
 
 }
