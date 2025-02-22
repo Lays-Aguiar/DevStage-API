@@ -1,5 +1,6 @@
 import { FastifyPluginAsyncZod } from "fastify-type-provider-zod"
 import z from "zod"
+import { subscribeToEvent } from "../functions/subscribe-to-event"
 
 export const subscribeToEventRoute: FastifyPluginAsyncZod = async (app) => {
 
@@ -14,15 +15,17 @@ export const subscribeToEventRoute: FastifyPluginAsyncZod = async (app) => {
             }),
             response: {
                 201: z.object({
-                    name: z.string(),
-                    email: z.string().email(),
+                    subscriberId: z.string()
                 })
             }
         }
     }, async (request, replay) => {
         const { name, email } = request.body
-        const teste = 1
-        return replay.status(201).send({ name, email })
+
+        const { subscriberId } = await subscribeToEvent({ name, email })
+
+
+        return replay.status(201).send({ subscriberId })
     })
 
     app.get('/subscriptions', () => {
