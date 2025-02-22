@@ -26,8 +26,7 @@ O **DevStage** é uma plataforma de inscrição em eventos que permite aos usuá
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/rocketseat-education/nlw-connect-node.git
-   cd nlw-connect-node
+   git clone https://github.com/Lays-Aguiar/DevStage-API.git
    ```
 
 2. **Instale as dependências:**
@@ -59,13 +58,6 @@ O **DevStage** é uma plataforma de inscrição em eventos que permite aos usuá
    ```
    A aplicação estará disponível em `http://localhost:3000`.
 
-## 📂 Estrutura do Projeto
-
-- `src/`: Contém o código-fonte da aplicação.
-  - `controllers/`: Controladores que gerenciam as requisições e respostas.
-  - `models/`: Definições das entidades e interação com o banco de dados.
-  - `routes/`: Definição das rotas da API.
-  - `services/`: Contém a lógica de negócios da aplicação.
 
 ## 🤝 Contribuição
 
@@ -79,7 +71,7 @@ Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](L
 
 Este projeto foi desenvolvido por **Lays Vidal de Aguiar** durante o **NLW Connect** da Rocketseat.
 
-![Certificado](./assets/certificado.png)
+<img height="120em" src="./assets/certificado.png" />
 
 - 📜 Certificado: [Visualizar Certificado](https://app.rocketseat.com.br/certificates/f76f15f2-6142-4c4b-985a-da6442e202c7)
 - 🔑 Código de validação: `f76f15f2-6142-4c4b-985a-da6442e202c7`
