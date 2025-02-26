@@ -1,40 +1,44 @@
-# DevStage - Projeto NLW Connect
+# DevStage - NLW Connect (Node.js)
 
-Este repositório contém o código-fonte da API do **DevStage**, uma aplicação desenvolvida durante o evento [Next Level Week (NLW) Connect](https://www.rocketseat.com.br/eventos/nlw) da Rocketseat, na trilha de Node.js.
+Este repositório contém o código-fonte do **DevStage**, uma aplicação back-end desenvolvida durante o evento [Next Level Week (NLW) Connect](https://www.rocketseat.com.br/eventos/nlw) da Rocketseat, na trilha de Node.js.
 
 ## 📌 Sobre o Projeto
 
-O **DevStage** é uma plataforma de inscrição em eventos que permite aos usuários:
+O **DevStage** é uma API REST desenvolvida para gerenciar eventos, permitindo operações como:
 
-- Registrar-se em eventos e obter ingressos.
-- Gerar links de convite personalizados.
-- Visualizar rankings de indicações.
+- Cadastro e gerenciamento de usuários.
+- Registro de participantes em eventos.
+- Geração de certificados digitais.
+- Monitoramento de indicações.
 
 ## 🚀 Tecnologias Utilizadas
 
-- [Node.js](https://nodejs.org/): Ambiente de execução JavaScript server-side.
+- [Node.js](https://nodejs.org/): Runtime JavaScript para back-end.
 - [TypeScript](https://www.typescriptlang.org/): Superset do JavaScript que adiciona tipagem estática.
-- [Drizzle](https://orm.drizzle.team/): ORM para interação com o banco de dados.
-- [Docker](https://www.docker.com/): Plataforma para criação e gerenciamento de containers.
+- [Fastify](https://www.fastify.io/): Framework web rápido e eficiente.
+- [Drizzle ORM](https://orm.drizzle.team/): ORM moderno e otimizado para TypeScript.
+- [Docker](https://www.docker.com/): Containerização para PostgreSQL e Redis.
+- [PostgreSQL](https://www.postgresql.org/): Banco de dados relacional.
+- [Redis](https://redis.io/): Armazenamento em cache e filas.
+- [Zod](https://zod.dev/): Biblioteca de validação de dados.
+- [Swagger](https://swagger.io/): Documentação interativa da API.
 
 ## 📋 Pré-requisitos
 
 - [Node.js](https://nodejs.org/) versão 14 ou superior.
-- [Docker](https://www.docker.com/) para execução do banco de dados em um container.
+- [Docker](https://www.docker.com/) instalado para rodar PostgreSQL e Redis.
+- Um gerenciador de pacotes como npm ou yarn.
+
 
 ## 🔧 Instalação e Execução
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/Lays-Aguiar/DevStage-API.git
-   ```
 
-2. **Instale as dependências:**
+1. **Instale as dependências:**
    ```bash
    npm install
    ```
 
-3. **Configure as variáveis de ambiente:**
+2. **Configure as variáveis de ambiente:**
    
    Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
    ```env
@@ -42,17 +46,17 @@ O **DevStage** é uma plataforma de inscrição em eventos que permite aos usuá
    ```
    Certifique-se de substituir `user`, `password` e `localhost` pelas credenciais e host do seu banco de dados.
 
-4. **Inicie o banco de dados com Docker:**
+3. **Inicie o banco de dados com Docker:**
    ```bash
    docker-compose up -d
    ```
 
-5. **Execute as migrações do banco de dados:**
+4. **Execute as migrações do banco de dados:**
    ```bash
    npm run migrate
    ```
 
-6. **Inicie a aplicação:**
+5. **Inicie a aplicação:**
    ```bash
    npm run dev
    ```
